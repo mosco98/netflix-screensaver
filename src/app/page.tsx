@@ -138,11 +138,11 @@ const HomePage = () => {
                   delay: 1.6
                 }
               }}
-              className="h-screen w-screen overflow-hidden fixed flex items-center justify-center"
+              className="h-dvh w-dvw overflow-hidden fixed flex items-center justify-center"
               key={i}
             >
               <motion.div
-                className="box-content absolute h-screen w-screen py-6"
+                className="box-content absolute h-dvh w-dvw py-6"
                 style={{
                   backgroundImage: `url(${movie.cover})`,
                   backgroundSize: "cover",
