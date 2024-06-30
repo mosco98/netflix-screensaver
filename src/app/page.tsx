@@ -118,8 +118,6 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  console.log({ currentIndex });
-
   return (
     <AnimatePresence mode="wait">
       {MOVIES.map(
