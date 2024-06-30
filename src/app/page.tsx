@@ -164,9 +164,9 @@ const HomePage = () => {
                 }}
               ></motion.div>
 
-              <div className="fixed w-full h-full left-0 bg-gradient-to-b from-transparent to-black/50 p-[4rem] flex items-end z-30">
-                <div className="w-full flex items-end justify-between">
-                  <div className="flex flex-col gap-10">
+              <div className="fixed w-full h-full left-0 bg-gradient-to-b from-transparent to-black md:to-black/50 px-4 py-6 md:p-[4rem] flex items-end z-30">
+                <div className="w-full flex flex-col md:flex-row md:items-end justify-between gap-20 md:gap-0">
+                  <div className="flex flex-col gap-6 md:gap-10">
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{
@@ -251,7 +251,7 @@ const HomePage = () => {
                       priority
                     />
 
-                    <p className="text-sm text-center text-gray-300 font-medium">
+                    <p className="text-sm md:text-center text-gray-300 font-medium">
                       <span>Recreated by</span>{" "}
                       <a href="https://x.com/meandchimso" target="_blank">
                         @meandchimso
