@@ -162,7 +162,7 @@ const HomePage = () => {
                 }}
               ></motion.div>
 
-              <div className="fixed w-full h-full left-0 bg-gradient-to-b from-transparent to-black md:to-black/50 px-4 py-6 md:p-[4rem] flex items-end z-30">
+              <div className="fixed w-full h-full left-0 bg-gradient-to-b from-transparent to-black md:to-black/50 px-3 py-6 md:p-[4rem] flex items-end z-30">
                 <div className="w-full flex flex-col md:flex-row md:items-end justify-between gap-20 md:gap-0">
                   <div className="flex flex-col gap-6 md:gap-10">
                     <motion.div
