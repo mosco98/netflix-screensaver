@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { default as NextImage } from "next/image";
+import { useEffect, useState } from "react";
 
 const MOVIES = [
   {
@@ -110,19 +111,12 @@ const MOVIES = [
 const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const imgRef = useRef<HTMLImageElement | null>(null);
-
   useEffect(() => {
     const nextIndex = (currentIndex + 1) % MOVIES.length;
     const src = MOVIES[nextIndex].cover;
 
-    const loadNextImage = () => {
-      if (imgRef.current) {
-        imgRef.current.src = src;
-      }
-    };
-
-    loadNextImage();
+    const img = new Image();
+    img.src = src;
   }, [currentIndex]);
 
   useEffect(() => {
@@ -197,13 +191,9 @@ const HomePage = () => {
                             delay: 1.5
                           }
                         }}
-                        // transition={{
-
-                        //   ease: "easeInOut"
-                        // }}
                       >
                         <div className="flex items-center gap-1.5 font-medium">
-                          <Image
+                          <NextImage
                             src={"/symbol.png"}
                             width={35}
                             height={68}
@@ -216,7 +206,7 @@ const HomePage = () => {
                         </div>
 
                         <div className="px-3 mt-0">
-                          <Image
+                          <NextImage
                             src={movie.logo.url}
                             width={movie.logo.width}
                             height={movie.logo.height}
@@ -256,13 +246,12 @@ const HomePage = () => {
                       </motion.div>
                     </div>
                     <div>
-                      <Image
+                      <NextImage
                         src={"/logo.png"}
                         className="overflow-hidden"
                         width={200}
                         height={200}
                         alt=""
-                        priority
                       />
 
                       <p className="text-sm md:text-center text-gray-300 font-medium">
@@ -278,15 +267,6 @@ const HomePage = () => {
             )
         )}
       </AnimatePresence>
-
-      <Image
-        src={"/bg.jpg"}
-        hidden
-        ref={imgRef}
-        alt=""
-        sizes="(min-width: 808px) 50vw, 100vw"
-        fill
-      />
     </>
   );
 };
