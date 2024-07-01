@@ -114,14 +114,31 @@ const HomePage = () => {
     // Background Image Optimization
     const nextIndex = (currentIndex + 1) % MOVIES.length;
     const src = MOVIES[nextIndex].cover;
+    const logoSrc = MOVIES[nextIndex].logo.url;
 
     const img = new Image();
     const img2 = new Image();
     const img3 = new Image();
+    const img4 = new Image();
+    const img5 = new Image();
+
+    const logo = new Image();
+    const logo2 = new Image();
+    const logo3 = new Image();
+    const logo4 = new Image();
+    const logo5 = new Image();
 
     img.src = src;
     img2.src = src;
     img3.src = src;
+    img4.src = src;
+    img5.src = src;
+
+    logo.src = logoSrc;
+    logo2.src = logoSrc;
+    logo3.src = logoSrc;
+    logo4.src = logoSrc;
+    logo5.src = logoSrc;
   }, [currentIndex]);
 
   useEffect(() => {
