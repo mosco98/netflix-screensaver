@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -112,11 +111,17 @@ const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    // Background Image Optimization
     const nextIndex = (currentIndex + 1) % MOVIES.length;
     const src = MOVIES[nextIndex].cover;
 
     const img = new Image();
+    const img2 = new Image();
+    const img3 = new Image();
+
     img.src = src;
+    img2.src = src;
+    img3.src = src;
   }, [currentIndex]);
 
   useEffect(() => {
