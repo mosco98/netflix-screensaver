@@ -144,7 +144,7 @@ const HomePage = () => {
                 animate={{
                   opacity: 1,
                   transition: {
-                    duration: 1.2
+                    duration: 1.7
                   }
                 }}
                 exit={{
